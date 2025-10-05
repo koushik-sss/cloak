@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PII Redaction Comparison</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <div class="brandmark"></div>
+      <span class="brand">PII Redaction Comparison</span>
+    </header>
+
+    <main class="app-container">
+      <section class="panel input-panel">
+        <div class="panel-header">
+          <h2>Source Text</h2>
+        </div>
+        <textarea id="sourceText" placeholder="Paste transcripts, tickets, chat logs, or draft content that might contain personal data..."></textarea>
+        <div class="panel-actions">
+          <button id="compareButton" class="primary-action">Compare Models</button>
+          <span class="status-chip" id="statusChip">Standing by</span>
+        </div>
+      </section>
+
+      <div class="comparison-container">
+        <section class="panel output-panel">
+          <div class="panel-header">
+            <h2>Fine-Tuned Model</h2>
+          </div>
+          <textarea id="fineTunedText" readonly placeholder="Fine-tuned model output will appear here..."></textarea>
+        </section>
+
+        <section class="panel output-panel">
+          <div class="panel-header">
+            <h2>Base Model</h2>
+          </div>
+          <textarea id="baseText" readonly placeholder="Base model output will appear here..."></textarea>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
